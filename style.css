@@ -34,10 +34,14 @@ p {
 }
 
 /* Navbar */
+/* Navbar */
 header {
     background: #111111;
-    padding: 20px 40px;
+    padding: 15px 40px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header nav {
@@ -50,25 +54,66 @@ header h1 {
     color: #ffffff;
     font-size: 22px;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 header ul {
     display: flex;
     list-style: none;
-}
-
-header ul li {
-    margin-left: 25px;
+    gap: 25px;
+    transition: max-height 0.3s ease-in-out;
 }
 
 header ul li a {
     color: #cccccc;
     font-weight: 500;
+    transition: color 0.3s;
 }
 
 header ul li a:hover {
     color: #ff2b2b;
 }
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    header ul {
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        background: #111111;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 8px;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    header ul.show {
+        max-height: 400px;
+        /* expand when open */
+    }
+}
+
 
 /* Hero Section */
 .hero {
