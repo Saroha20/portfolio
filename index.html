@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rupesh Saroha | Data Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1 class="glow">Rupesh Saroha</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-images">
+        <img src="assests/mypic.jpg" alt="Rupesh Saroha" class="profile-img">
+      </div>
+      <div class="hero-text">
+        <h2 class="glow">Aspiring Data Analyst & Developer</h2>
+        <p>Transforming raw data into powerful insights with Python, SQL, and Power BI.</p>
+        <a href="#resume" class="btn">📄 Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="glow">About Me</h2>
+    <p>
+      I’m a budding Data Analyst with experience in Python, SQL, and Power BI, and a passion for turning data into
+      actionable insights.
+      I’ve worked on real-world projects building dashboards, automating reports, and collaborating with stakeholders to
+      drive
+      data-informed decisions. With a strong foundation in Computer Science and hands-on analytics work, I enjoy solving
+      problems
+      and creating solutions that make an impact.
+
+    </p>
+    <p><b>Profile:</b> Data Science & Analytics</p>
+    <p><b>Education:</b> B.Tech in Computer Science (2022–2026)</p>
+    <p><b>Languages:</b> Python, SQL</p>
+    <p><b>BI Tools:</b> Power BI, Excel</p>
+    <p><b>Other Skills:</b> EDA, DAX, Data Cleaning, Cohort Analysis</p>
+    <p><b>Interests:</b> Playing, Travel Photography, Reading</p>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2 class="glow">Education</h2>
+    <div class="edu-container">
+      <div class="edu-card">
+        <h3 class="edu-year">2022 – 2026</h3>
+        <h4> B.Tech — Computer Science</h4>
+        <p> Bennett University</p>
+        <ul>
+          <li> Coursework in Data Structures, Databases, and Machine Learning.</li>
+          <li> Led projects focusing on data visualization and EDA.</li>
+        </ul>
+      </div>
+      <div class="edu-card">
+        <h3>School Education</h3>
+        <p>DAYAWATI MODI ACADEMY</p>
+        <p><b>Class 12</b> — 86.6% <span class="edu-right">2021 – 2022</span></p>
+        <p><b>Class 10</b> — 76.8% <span class="edu-right">2019 – 2020</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2 class="glow">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Python</div>
+      <div class="skill">Java</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Excel</div>
+      <div class="skill">Machine Learning</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="glow">Projects</h2>
+    <div class="projects-carousel">
+      <button class="carousel-btn left" onclick="scrollProjects(-1)">&#10094;</button>
+      <div class="projects-track" id="projectsTrack">
+        <div class="project">
+          <img src="assests/fraud-figure.svg" alt="Fraud Detection">
+          <h3>Fraud Detection in Bank</h3>
+          <p>ML models (Random Forest, Logistic Regression) to detect anomalies in transactions.</p>
+          <a href="https://github.com/Saroha20/fraud-detection" target="_blank">GitHub Repo</a>
+        </div>
+        <div class="project">
+          <img src="assests/Screenshot 2025-08-24 222419.png" alt="Blinkit Dashboard">
+          <h3>Blinkit Sales Dashboard</h3>
+          <p>Interactive Power BI dashboard analyzing KPIs, sales trends & outlet categories.
+            <a href="https://github.com/Saroha20/blinkit-dasboard-bi" target="_blank">GitHub Repo</a>
+          </p>
+        </div>
+        <div class="project">
+          <img src="assests/me.jpeg" alt="MedAppoint">
+          <h3>MedAppoint</h3>
+          <p>Android app for doctor appointment scheduling.
+            <a href="https://github.com/Saroha20/MedAppoint" target="_blank">GitHub Repo</a>
+          </p>
+        </div>
+        <div class="project">
+          <img src="assests/netflix.png" alt="Netflix Clone">
+          <h3>Netflix Clone</h3>
+          <p>Frontend project replicating Netflix UI using HTML, CSS, and JavaScript.
+            <a href="https://github.com/Saroha20/netflix-clone" target="_blank">GitHub Repo</a>
+          </p>
+        </div>
+      </div>
+      <button class="carousel-btn right" onclick="scrollProjects(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2 class="glow">Resume</h2>
+    <a href="assests/my cv ds.pdf" download class="btn">📄 Download CV</a>
+  </section>
+
+  <!-- Contact -->
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <h2 class="section-title" data-ghost="Contact" style="display: flex; justify-content: center;">Contact</h2>
+
+    <div class="contact-grid">
+      <!-- Address -->
+      <div class="contact-item">
+        <div class="icon-wrap" aria-hidden="true">
+          <!-- Location Icon -->
+          <svg viewBox="0 0 24 24" class="icon">
+            <path
+              d="M12 2C8.7 2 6 4.7 6 8c0 5.25 6 12 6 12s6-6.75 6-12c0-3.3-2.7-6-6-6zm0 8.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5z"
+              fill="currentColor" />
+          </svg>
+        </div>
+        <h3>Address</h3>
+        <p class="muted">Noida, India</p>
+      </div>
+
+      <!-- Phone -->
+      <div class="contact-item">
+        <div class="icon-wrap" aria-hidden="true">
+          <!-- Phone Icon -->
+          <svg viewBox="0 0 24 24" class="icon">
+            <path
+              d="M6.6 10.8a15 15 0 0 0 6.6 6.6l1.8-1.8a1 1 0 0 1 1-.2c1.1.4 2.3.6 3.6.6a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.3 22 2 13.7 2 3a1 1 0 0 1 1-1h3.1a1 1 0 0 1 1 1c0 1.2.2 2.4.6 3.6a1 1 0 0 1-.2 1l-1.9 1.8z"
+              fill="currentColor" />
+          </svg>
+        </div>
+        <h3>Contact Number</h3>
+        <p class="muted"><a href="tel:+916395617113">+91 6395617113</a></p>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-item">
+        <div class="icon-wrap" aria-hidden="true">
+          <!-- Email Icon -->
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M2 4h20v16H2z" fill="none" />
+            <path d="M2 4h20v16H2V4zm10 7 10-7H2l10 7zm0 2-10-7v12h20V6l-10 7z" fill="currentColor" />
+          </svg>
+        </div>
+        <h3>Email Address</h3>
+        <p class="muted"><a href="mailto:rupeshsaroha20@gmail.com">rupeshsaroha20.com</a></p>
+      </div>
+
+      <!-- Resume -->
+      <div class="contact-item">
+        <div class="icon-wrap" aria-hidden="true">
+          <!-- Resume / Download Icon -->
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M12 16l4-5h-3V4h-2v7H8l4 5zM5 18h14v2H5z" fill="currentColor" />
+          </svg>
+        </div>
+        <h3>Download Resume</h3>
+        <p class="muted"><a class="link-underline" href="assests/my cv ds.pdf" download>resumelink</a></p>
+      </div>
+    </div>
+
+    <!-- Social Links -->
+    <!-- <div class="contact-social">
+    <span class="muted">Find me on</span>
+    <a class="social-pill" href="https://www.linkedin.com/in/aditya-teotia-ab2ab025a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" class="icon-sm" aria-hidden="true">
+        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.32-2.47 4.77-2.47 5.1 0 6.05 3.36 6.05 7.73V24h-5V16.4c0-1.81-.03-4.15-2.53-4.15-2.53 0-2.92 1.98-2.92 4.02V24H8z" fill="currentColor"/>
+      </svg>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </div> -->
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Rupesh Saroha | Built with 💻 using HTML, CSS & JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
