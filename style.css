@@ -181,20 +181,25 @@ header ul li a:hover {
 }
 
 /* Responsive */
+/*  */
 @media (max-width: 768px) {
-    .hero-content {
+    header ul {
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        background: #111111;
         flex-direction: column;
-        text-align: center;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 8px;
+        display: none;  /* hide by default */
     }
 
-    .hero-text {
-        text-align: center;
-    }
-
-    .hero-images {
-        margin-bottom: 25px;
+    header ul.show {
+        display: flex; /* only show when toggled */
     }
 }
+
 
 /* Sections */
 section {
