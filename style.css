@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset */ 
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +34,6 @@ p {
 }
 
 /* Navbar */
-/* Navbar */
 header {
     background: #111111;
     padding: 15px 40px;
@@ -61,7 +60,7 @@ header ul {
     display: flex;
     list-style: none;
     gap: 25px;
-    transition: max-height 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 header ul li a {
@@ -104,16 +103,13 @@ header ul li a:hover {
         gap: 15px;
         padding: 20px;
         border-radius: 8px;
-        max-height: 0;
-        overflow: hidden;
+        display: none;   /* hide by default */
     }
 
     header ul.show {
-        max-height: 400px;
-        /* expand when open */
+        display: flex;   /* show only when toggled */
     }
 }
-
 
 /* Hero Section */
 .hero {
@@ -133,6 +129,7 @@ header ul li a:hover {
     max-width: 1100px;
 }
 
+/* Image */
 .hero-images {
     flex: 1;
     display: flex;
@@ -148,6 +145,7 @@ header ul li a:hover {
     object-fit: cover;
 }
 
+/* Text */
 .hero-text {
     flex: 2;
 }
@@ -180,26 +178,22 @@ header ul li a:hover {
     color: #ff2b2b;
 }
 
-/* Responsive */
-/*  */
-@media (max-width: 768px) {
-    header ul {
-        position: absolute;
-        top: 60px;
-        right: 40px;
-        background: #111111;
+/* Responsive Hero (text below image on mobile/tablet) */
+@media (max-width: 992px) {
+    .hero-content {
         flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-        border-radius: 8px;
-        display: none;  /* hide by default */
+        text-align: center;
+        gap: 25px;
     }
 
-    header ul.show {
-        display: flex; /* only show when toggled */
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-images {
+        margin-bottom: 25px;
     }
 }
-
 
 /* Sections */
 section {
@@ -345,7 +339,6 @@ footer p {
 /* Education */
 .edu-container {
     display: flex;
-
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -373,8 +366,6 @@ footer p {
     height: 40px;
     background: url("A_set_of_five_flat-design_digital_vector_icons_glo.png") no-repeat;
     background-size: 200px 40px;
-    /* 5 icons horizontally */
-    /* filter: drop-shadow(0 0 8px #ff2b2b); */
 }
 
 /* Adjust background positions */
