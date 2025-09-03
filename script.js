@@ -29,3 +29,10 @@ function scrollProjects(direction) {
     const projectWidth = track.children[0].offsetWidth + 20; // width + margin
     track.style.transform = `translateX(-${currentIndex * projectWidth}px)`;
 }
+// Mobile Navbar Toggle
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("header ul");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+});
