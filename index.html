@@ -1,232 +1,369 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rupesh Saroha | Data Portfolio</title>
+  <title>Rupesh Saroha | Full Stack Developer & Data Portfolio</title>
+  <meta name="description" content="Rupesh Saroha – Full Stack Developer (Next.js, Node.js, PostgreSQL), AI & Data enthusiast. Projects, experience and resume.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
+  <div class="progress" id="progress"></div>
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span></div>
+
   <!-- Header -->
-  <header>
+  <header id="header">
     <nav>
-      <h1 class="glow">Rupesh Saroha</h1>
+      <a href="#home" class="logo">RS<span>.</span></a>
 
-      <!-- Hamburger Button -->
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <!-- Menu -->
       <ul id="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle light/dark theme">
+          <svg class="sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <!-- Hamburger Button -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="hero-text reveal">
+          <span class="badge"><i></i> Open to full-time opportunities · PPO holder</span>
+          <p class="hello">Hi, I'm</p>
+          <h1 class="name">Rupesh Saroha</h1>
+          <h2 class="role">I'm a <span id="typed" class="typed"></span><span class="cursor">|</span></h2>
+          <p class="lead">Building scalable web products with Next.js, Node.js and PostgreSQL — and turning raw data into powerful insights with Python, SQL and Power BI.</p>
+          <div class="cta">
+            <a href="assests/Rupesh_Saroha_CV.pdf" download class="btn btn-primary">⬇ Download CV</a>
+            <a href="#projects" class="btn btn-ghost">View Projects</a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/Saroha20" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rupesh-saroha-248a59257/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.2 8h4.6v15H.2zM8 8h4.4v2.1h.1c.6-1.2 2.1-2.4 4.4-2.4 4.7 0 5.5 3.1 5.5 7.1V23h-4.6v-7.4c0-1.8 0-4-2.5-4s-2.8 1.9-2.8 3.9V23H8z"/></svg>
+            </a>
+            <a href="mailto:rupeshsaroha20@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            </a>
+          </div>
+        </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-images">
-        <img src="assests/mypic.jpg" alt="Rupesh Saroha" class="profile-img">
+        <div class="hero-images reveal">
+          <div class="avatar-ring">
+            <img src="assests/mypic.jpg" alt="Rupesh Saroha" class="profile-img">
+          </div>
+          <div class="float-chip chip-1">⚡ Next.js</div>
+          <div class="float-chip chip-2">🐍 Python</div>
+          <div class="float-chip chip-3">🐘 PostgreSQL</div>
+        </div>
       </div>
-      <div class="hero-text">
-        <h2 class="glow">Aspiring Data Analyst & Developer</h2>
-        <p>Transforming raw data into powerful insights with Python, SQL, and Power BI.</p>
-        <a href="#resume" class="btn">📄 Download CV</a>
+
+      <div class="stats reveal">
+        <div class="stat"><b data-count="7.5" data-decimals="1">0</b><span>CGPA</span></div>
+        <div class="stat"><b data-count="2" data-suffix="">0</b><span>Internships</span></div>
+        <div class="stat"><b data-count="92" data-suffix="%">0</b><span>Fraud model accuracy</span></div>
+        <div class="stat"><b data-count="83.3" data-decimals="1" data-suffix="%">0</b><span>RAG retrieval hit-rate</span></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2 class="glow">About Me</h2>
-    <p>
-      I’m a budding Data Analyst with experience in Python, SQL, and Power BI, and a passion for turning data into
-      actionable insights.
-      I’ve worked on real-world projects building dashboards, automating reports, and collaborating with stakeholders to
-      drive
-      data-informed decisions. With a strong foundation in Computer Science and hands-on analytics work, I enjoy solving
-      problems
-      and creating solutions that make an impact.
-
-    </p>
-    <p><b>Profile:</b> Data Science & Analytics</p>
-    <p><b>Education:</b> B.Tech in Computer Science (2022–2026)</p>
-    <p><b>Languages:</b> Python, SQL</p>
-    <p><b>BI Tools:</b> Power BI, Excel</p>
-    <p><b>Other Skills:</b> EDA, DAX, Data Cleaning, Cohort Analysis</p>
-    <p><b>Interests:</b> Playing, Travel Photography, Reading</p>
-  </section>
-
-  <!-- Education -->
-  <section id="education">
-    <h2 class="glow">Education</h2>
-    <div class="edu-container">
-      <div class="edu-card">
-        <h3 class="edu-year">2022 – 2026</h3>
-        <h4> B.Tech — Computer Science</h4>
-        <p> Bennett University</p>
-        <ul>
-          <li> Coursework in Data Structures, Databases, and Machine Learning.</li>
-          <li> Led projects focusing on data visualization and EDA.</li>
+    <!-- About -->
+    <section id="about">
+      <div class="section-head reveal"><span class="eyebrow">01 — About</span><h2>About Me</h2></div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I’m a Computer Science engineer who enjoys building complete products — from database schema and REST APIs to polished
+            front-ends — and a data enthusiast with experience in Python, SQL, and Power BI, with a passion for turning data into
+            actionable insights.
+          </p>
+          <p>
+            I’ve worked on real-world projects building full-stack booking platforms, AI-powered chatbots, dashboards and automated reports,
+            collaborating with stakeholders to drive data-informed decisions. With a strong foundation in Computer Science and hands-on
+            experience, I enjoy solving problems and creating solutions that make an impact.
+          </p>
+        </div>
+        <ul class="facts reveal">
+          <li><b>Profile</b><span>Full Stack Development · Data Science & Analytics</span></li>
+          <li><b>Education</b><span>B.Tech in Computer Science (2022–2026)</span></li>
+          <li><b>Languages</b><span>JavaScript, TypeScript, Python, SQL, Java</span></li>
+          <li><b>BI Tools</b><span>Power BI, Excel</span></li>
+          <li><b>Other Skills</b><span>EDA, DAX, Data Cleaning, Cohort Analysis</span></li>
+          <li><b>Interests</b><span>Playing, Travel Photography, Reading</span></li>
         </ul>
       </div>
-      <div class="edu-card">
-        <h3>School Education</h3>
-        <p>DAYAWATI MODI ACADEMY</p>
-        <p><b>Class 12</b> — 86.6% <span class="edu-right">2021 – 2022</span></p>
-        <p><b>Class 10</b> — 76.8% <span class="edu-right">2019 – 2020</span></p>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="section-head reveal"><span class="eyebrow">02 — Experience</span><h2>Where I've Worked</h2></div>
+      <div class="timeline">
+
+        <article class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-card">
+            <div class="t-top">
+              <div>
+                <h3>Full Stack Developer Intern</h3>
+                <p class="company">Volintra Supply Networks</p>
+              </div>
+              <span class="date">Mar 2026 – Sep 2026</span>
+            </div>
+            <ul>
+              <li>Worked on <b>LuxRide</b>, a full-stack luxury ride booking platform using Next.js, Node.js, PostgreSQL, and Prisma.</li>
+              <li>Developed backend APIs, booking workflow, and database integration for ride management.</li>
+              <li>Integrated Razorpay payment gateway and Google Maps API for fare calculation and location services.</li>
+              <li>Implemented secure authentication using JWT and Google OAuth.</li>
+              <li>Collaborated with the team using Git & GitHub in an agile environment; enhanced performance and user experience through scalable architecture improvements.</li>
+              <li class="highlight">🏆 Received a Pre-Placement Offer (PPO) based on performance, technical contribution, and problem-solving skills.</li>
+            </ul>
+            <div class="tags"><span>Next.js</span><span>Node.js</span><span>PostgreSQL</span><span>Prisma</span><span>Razorpay</span><span>Google Maps API</span><span>JWT</span><span>OAuth</span></div>
+          </div>
+        </article>
+
+        <article class="t-item reveal">
+          <div class="t-dot"></div>
+          <div class="t-card">
+            <div class="t-top">
+              <div>
+                <h3>AI Developer Intern</h3>
+                <p class="company">FEAT: The Career Institute · Meerut, India</p>
+              </div>
+              <span class="date">Dec 2025 – Feb 2026</span>
+            </div>
+            <ul>
+              <li>Partnered with institute staff to scope requirements and shipped a <b>Smart Attendance System</b> (role-based Admin/Student panels) live on Streamlit Cloud, using geolocation verification (150 m radius) to prevent proxy attendance.</li>
+              <li>Built a <b>RAG chatbot</b> for student queries with hybrid search and reranking, defined success metrics up front, and reached an <b>83.3% retrieval hit-rate</b> through ablation experiments.</li>
+              <li>Used function-calling to eliminate hallucinated figures, improving answer reliability for end users.</li>
+            </ul>
+            <div class="tags"><span>Python</span><span>Streamlit</span><span>RAG</span><span>Hybrid Search</span><span>Reranking</span><span>Function Calling</span></div>
+          </div>
+        </article>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2 class="glow">Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">Python</div>
-      <div class="skill">Java</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Power BI</div>
-      <div class="skill">Excel</div>
-      <div class="skill">Machine Learning</div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2 class="glow">Projects</h2>
-    <div class="projects-carousel">
-      <button class="carousel-btn left" onclick="scrollProjects(-1)">&#10094;</button>
-      <div class="projects-track" id="projectsTrack">
-        <div class="project">
-          <img src="assests/fraud-figure.svg" alt="Fraud Detection">
-          <h3>Fraud Detection in Bank</h3>
-          <p>ML models (Random Forest, Logistic Regression) to detect anomalies in transactions.</p>
-          <a href="https://github.com/Saroha20/fraud-detection" target="_blank">GitHub Repo</a>
+    <!-- Skills -->
+    <section id="skills">
+      <div class="section-head reveal"><span class="eyebrow">03 — Skills</span><h2>Tech Stack</h2></div>
+      <div class="skills-wrap">
+        <div class="skill-group reveal">
+          <h3>Languages</h3>
+          <div class="skills-grid">
+            <div class="skill">Python</div><div class="skill">Java</div><div class="skill">SQL</div><div class="skill">JavaScript</div><div class="skill">TypeScript</div>
+          </div>
         </div>
-        <div class="project">
-          <img src="assests/Screenshot 2025-08-24 222419.png" alt="Blinkit Dashboard">
-          <h3>Blinkit Sales Dashboard</h3>
-          <p>Interactive Power BI dashboard analyzing KPIs, sales trends & outlet categories.
-            <a href="https://github.com/Saroha20/blinkit-dasboard-bi" target="_blank">GitHub Repo</a>
-          </p>
+        <div class="skill-group reveal">
+          <h3>Backend</h3>
+          <div class="skills-grid">
+            <div class="skill">Node.js</div><div class="skill">Express.js</div><div class="skill">REST APIs</div><div class="skill">Microservices</div>
+          </div>
         </div>
-        <div class="project">
-          <img src="assests/me.jpeg" alt="MedAppoint">
-          <h3>MedAppoint</h3>
-          <p>Android app for doctor appointment scheduling.
-            <a href="https://github.com/Saroha20/MedAppoint" target="_blank">GitHub Repo</a>
-          </p>
+        <div class="skill-group reveal">
+          <h3>Frontend</h3>
+          <div class="skills-grid">
+            <div class="skill">HTML</div><div class="skill">CSS</div><div class="skill">JavaScript</div><div class="skill">Next.js</div>
+          </div>
         </div>
-        <div class="project">
-          <img src="assests/netflix.png" alt="Netflix Clone">
-          <h3>Netflix Clone</h3>
-          <p>Frontend project replicating Netflix UI using HTML, CSS, and JavaScript.
-            <a href="https://github.com/Saroha20/netflix-clone" target="_blank">GitHub Repo</a>
-          </p>
+        <div class="skill-group reveal">
+          <h3>Databases</h3>
+          <div class="skills-grid">
+            <div class="skill">MongoDB</div><div class="skill">PostgreSQL</div><div class="skill">SQL</div><div class="skill">Prisma</div>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Cloud & DevOps</h3>
+          <div class="skills-grid">
+            <div class="skill">Docker</div><div class="skill">Git</div><div class="skill">GitHub</div><div class="skill">CI/CD Basics</div><div class="skill">Cloud Fundamentals</div>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Data & ML</h3>
+          <div class="skills-grid">
+            <div class="skill">Power BI</div><div class="skill">Excel</div><div class="skill">Machine Learning</div><div class="skill">Jupyter Notebook</div>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Tools & Platforms</h3>
+          <div class="skills-grid">
+            <div class="skill">Postman</div><div class="skill">VS Code</div><div class="skill">Git</div><div class="skill">GitHub</div>
+          </div>
         </div>
       </div>
-      <button class="carousel-btn right" onclick="scrollProjects(1)">&#10095;</button>
-    </div>
-  </section>
+    </section>
 
-  <!-- Resume -->
-  <section id="resume">
-    <h2 class="glow">Resume</h2>
-    <a href="assests/my cv ds.pdf" download class="btn">📄 Download CV</a>
-  </section>
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-head reveal"><span class="eyebrow">04 — Projects</span><h2>Things I've Built</h2></div>
+      <div class="projects-carousel reveal">
+        <button class="carousel-btn left" onclick="scrollProjects(-1)" aria-label="Previous projects">&#10094;</button>
+        <div class="projects-track" id="projectsTrack">
 
-  <!-- Contact -->
-  <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <h2 class="section-title" data-ghost="Contact" style="display: flex; justify-content: center;">Contact</h2>
+          <div class="project">
+            <div class="thumb"><img src="assests/fraud-figure.svg" alt="Fraud Detection"></div>
+            <div class="p-body">
+              <h3>Fraud Detection in Bank</h3>
+              <p>ML models (Random Forest, Logistic Regression) to detect anomalies in transactions. Trained on 50K+ transactions, reaching 92% accuracy, with ARIMA time-series modelling to catch unusual spending patterns.</p>
+              <div class="tags"><span>Python</span><span>ML</span><span>ARIMA</span></div>
+              <a href="https://github.com/Saroha20/fraud-detection" target="_blank" rel="noopener">GitHub Repo →</a>
+            </div>
+          </div>
 
-    <div class="contact-grid">
-      <!-- Address -->
-      <div class="contact-item">
-        <div class="icon-wrap" aria-hidden="true">
-          <!-- Location Icon -->
-          <svg viewBox="0 0 24 24" class="icon">
-            <path
-              d="M12 2C8.7 2 6 4.7 6 8c0 5.25 6 12 6 12s6-6.75 6-12c0-3.3-2.7-6-6-6zm0 8.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5z"
-              fill="currentColor" />
-          </svg>
+          <div class="project">
+            <div class="thumb"><img src="assests/smart-parking.svg" alt="Smart Parking System"></div>
+            <div class="p-body">
+              <h3>Smart Parking System</h3>
+              <p>Parking management system that tracks slot availability and handles vehicle entry, exit and slot allocation. REST APIs, relational schema for slots, bookings and users, validation and real-time slot status updates.</p>
+              <div class="tags"><span>Node.js</span><span>Express</span><span>PostgreSQL</span></div>
+              <a href="https://github.com/Saroha20/smart-parking-system" target="_blank" rel="noopener">GitHub Repo →</a>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="thumb"><img src="assests/Screenshot 2025-08-24 222419.png" alt="Blinkit Dashboard"></div>
+            <div class="p-body">
+              <h3>Blinkit Sales Dashboard</h3>
+              <p>Interactive Power BI dashboard analyzing KPIs, sales trends & outlet categories across 1M+ records, with filters and drill-throughs for faster business insights.</p>
+              <div class="tags"><span>Power BI</span><span>DAX</span></div>
+              <a href="https://github.com/Saroha20/blinkit-dasboard-bi" target="_blank" rel="noopener">GitHub Repo →</a>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="thumb"><img src="assests/me.jpeg" alt="MedAppoint"></div>
+            <div class="p-body">
+              <h3>MedAppoint</h3>
+              <p>Android app for doctor appointment scheduling.</p>
+              <div class="tags"><span>Android</span><span>Java</span></div>
+              <a href="https://github.com/Saroha20/MedAppoint" target="_blank" rel="noopener">GitHub Repo →</a>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="thumb"><img src="assests/netflix.png" alt="Netflix Clone"></div>
+            <div class="p-body">
+              <h3>Netflix Clone</h3>
+              <p>Frontend project replicating Netflix UI using HTML, CSS, and JavaScript.</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <a href="https://github.com/Saroha20/netflix-clone" target="_blank" rel="noopener">GitHub Repo →</a>
+            </div>
+          </div>
+
         </div>
-        <h3>Address</h3>
-        <p class="muted">Noida, India</p>
+        <button class="carousel-btn right" onclick="scrollProjects(1)" aria-label="Next projects">&#10095;</button>
       </div>
+    </section>
 
-      <!-- Phone -->
-      <div class="contact-item">
-        <div class="icon-wrap" aria-hidden="true">
-          <!-- Phone Icon -->
-          <svg viewBox="0 0 24 24" class="icon">
-            <path
-              d="M6.6 10.8a15 15 0 0 0 6.6 6.6l1.8-1.8a1 1 0 0 1 1-.2c1.1.4 2.3.6 3.6.6a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.3 22 2 13.7 2 3a1 1 0 0 1 1-1h3.1a1 1 0 0 1 1 1c0 1.2.2 2.4.6 3.6a1 1 0 0 1-.2 1l-1.9 1.8z"
-              fill="currentColor" />
-          </svg>
+    <!-- Education -->
+    <section id="education">
+      <div class="section-head reveal"><span class="eyebrow">05 — Education</span><h2>Education</h2></div>
+      <div class="edu-container">
+        <div class="edu-card reveal">
+          <span class="edu-year">2022 – 2026</span>
+          <h3>B.Tech — Computer Science Engineering</h3>
+          <p class="school">Bennett University, Greater Noida</p>
+          <div class="grade">CGPA <b>7.5</b></div>
+          <ul>
+            <li>Coursework in Data Structures, Databases, and Machine Learning.</li>
+            <li>Led projects focusing on data visualization and EDA.</li>
+          </ul>
         </div>
-        <h3>Contact Number</h3>
-        <p class="muted"><a href="tel:+916395617113">+91 6395617113</a></p>
+        <div class="edu-card reveal">
+          <span class="edu-year">School Education</span>
+          <h3>Dayawati Modi Academy, Meerut</h3>
+          <p class="school">Central Board of Secondary Education</p>
+          <div class="school-row"><span><b>Class XII</b> · 2021 – 2022</span><em>87%</em></div>
+          <div class="school-row"><span><b>Class X</b> · 2019 – 2020</span><em>84%</em></div>
+        </div>
       </div>
+    </section>
 
-      <!-- Email -->
-      <div class="contact-item">
-        <div class="icon-wrap" aria-hidden="true">
-          <!-- Email Icon -->
-          <svg viewBox="0 0 24 24" class="icon">
-            <path d="M2 4h20v16H2z" fill="none" />
-            <path d="M2 4h20v16H2V4zm10 7 10-7H2l10 7zm0 2-10-7v12h20V6l-10 7z" fill="currentColor" />
-          </svg>
+    <!-- Resume -->
+    <section id="resume">
+      <div class="resume-card reveal">
+        <div>
+          <h2>Want the full picture?</h2>
+          <p>Download my latest resume with experience, projects and skills.</p>
         </div>
-        <h3>Email Address</h3>
-        <p class="muted"><a href="mailto:rupeshsaroha20@gmail.com">rupeshsaroha20.com</a></p>
+        <a href="assests/Rupesh_Saroha_CV.pdf" download class="btn btn-primary">⬇ Download CV</a>
       </div>
+    </section>
 
-      <!-- Resume
-      <div class="contact-item">
-        <div class="icon-wrap" aria-hidden="true"> -->
-          <!-- Resume / Download Icon
-          <svg viewBox="0 0 24 24" class="icon">
-            <path d="M12 16l4-5h-3V4h-2v7H8l4 5zM5 18h14v2H5z" fill="currentColor" />
-          </svg>
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="section-head center reveal"><span class="eyebrow">06 — Contact</span><h2>Let's Work Together</h2></div>
+
+      <div class="contact-grid">
+        <div class="contact-item reveal">
+          <div class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M12 2C8.7 2 6 4.7 6 8c0 5.25 6 12 6 12s6-6.75 6-12c0-3.3-2.7-6-6-6zm0 8.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5z" fill="currentColor" /></svg>
+          </div>
+          <h3>Address</h3>
+          <p class="muted">Noida, India</p>
         </div>
-        <h3>Download Resume</h3>
-        <p class="muted"><a class="link-underline" href="assests/my cv ds.pdf" download>resumelink</a></p>
-      </div> -->
-    </div>
 
-    <!-- Social Links -->
-    <!-- <div class="contact-social">
-    <span class="muted">Find me on</span>
-    <a class="social-pill" href="https://www.linkedin.com/in/aditya-teotia-ab2ab025a/" target="_blank" rel="noopener" aria-label="LinkedIn">
-      <svg viewBox="0 0 24 24" class="icon-sm" aria-hidden="true">
-        <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.32-2.47 4.77-2.47 5.1 0 6.05 3.36 6.05 7.73V24h-5V16.4c0-1.81-.03-4.15-2.53-4.15-2.53 0-2.92 1.98-2.92 4.02V24H8z" fill="currentColor"/>
-      </svg>
-      <span class="sr-only">LinkedIn</span>
-    </a>
-  </div> -->
-  </section>
+        <div class="contact-item reveal">
+          <div class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l1.8-1.8a1 1 0 0 1 1-.2c1.1.4 2.3.6 3.6.6a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.3 22 2 13.7 2 3a1 1 0 0 1 1-1h3.1a1 1 0 0 1 1 1c0 1.2.2 2.4.6 3.6a1 1 0 0 1-.2 1l-1.900 1.800z" fill="currentColor" /></svg>
+          </div>
+          <h3>Contact Number</h3>
+          <p class="muted"><a href="tel:+916395617113">+91 6395617113</a></p>
+        </div>
 
+        <div class="contact-item reveal">
+          <div class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M2 4h20v16H2V4zm10 7 10-7H2l10 7zm0 2-10-7v12h20V6l-10 7z" fill="currentColor" /></svg>
+          </div>
+          <h3>Email Address</h3>
+          <p class="muted"><a href="mailto:rupeshsaroha20@gmail.com">rupeshsaroha20@gmail.com</a></p>
+        </div>
+
+        <div class="contact-item reveal">
+          <div class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.2 8h4.6v15H.2zM8 8h4.4v2.1h.1c.6-1.2 2.1-2.4 4.4-2.4 4.7 0 5.5 3.1 5.5 7.1V23h-4.6v-7.4c0-1.8 0-4-2.5-4s-2.8 1.9-2.8 3.9V23H8z" fill="currentColor"/></svg>
+          </div>
+          <h3>LinkedIn</h3>
+          <p class="muted"><a href="https://www.linkedin.com/in/rupesh-saroha-248a59257/" target="_blank" rel="noopener">rupesh-saroha</a></p>
+        </div>
+
+        <div class="contact-item reveal">
+          <div class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z" fill="currentColor"/></svg>
+          </div>
+          <h3>GitHub</h3>
+          <p class="muted"><a href="https://github.com/Saroha20" target="_blank" rel="noopener">Saroha20</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Rupesh Saroha | Built with 💻 using HTML, CSS & JS</p>
+    <p>© <span id="year">2026</span> Rupesh Saroha | Built with 💻 using HTML, CSS & JS</p>
   </footer>
 
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
   <script src="script.js"></script>
 </body>
 
